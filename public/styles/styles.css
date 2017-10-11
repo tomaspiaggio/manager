@@ -1,0 +1,53 @@
+.mod--buttons {
+    width: 200px;
+}
+
+.icon {
+    border: none;
+    background: transparent;
+    position: absolute;
+}
+
+.mod__toggle {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all .3s;
+}
+
+.mod__toggle.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+.toggle {
+    float: left;
+    padding: 33% 0 0;
+    width: 33%;
+}
+
+.icon::after {
+    color: white;
+    background: black;
+    padding: 3px;
+    transition: all .3s 1s;
+    position: absolute;
+    top: 0;
+}
+
+.selection--start:hover::after {
+    content: 'Start Selection';
+}
+.selection--end:hover::after {
+    content: 'End Selection';
+}
+.status--play:hover::after {
+    content: 'Play';
+}
+.status--stop:hover::after {
+    content: 'Stop';
+}
+.status--set-origin:hover::after {
+    content: 'Set Origin';
+}
